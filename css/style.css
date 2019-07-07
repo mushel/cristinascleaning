@@ -1,0 +1,106 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.brand-logo {
+  background: url("../img/logo.png") no-repeat;
+  width: 157px;
+  height: 66px;
+  margin-top: 4px;
+}
+nav ul.left {
+  margin-left: 200px;
+  font-weight: 700;
+}
+nav ul.right li {
+  float: none;
+  line-height: 30px;
+}
+nav ul.right {
+  padding-top: 3px;
+  text-align: right;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.steps img {
+  height:  100px
+}
+.slider {
+  background: url('https://content.thriveglobal.com/wp-content/uploads/2018/06/clean-house-parker.jpg') no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* Inactive/Active Default input field color */
+footer .input-field input[type]:not([readonly]),
+footer .input-field input[type]:focus:not([readonly]),
+footer .input-field textarea:not([readonly]),
+footer .input-field textarea:focus:not([readonly]),
+footer .select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #e0f2f1 !important;
+    color: #e0f2f1 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Inactive/Active Default input label color */
+footer .input-field input[type]:focus:not([readonly])+label,
+footer .input-field textarea:focus:not([readonly])+label,
+footer .input-field > label {
+    color: #e0f2f1 !important;
+}
+footer .select-wrapper .caret {
+  fill: #e0f2f1 !important;
+}
+
+/* Inactive/Active Default input label color */
+.estimate .input-field input[type]:focus:not([readonly])+label,
+.estimate .input-field textarea:focus:not([readonly])+label,
+.estimate .input-field > label {
+    color: #607d8b !important;
+}
+.estimate .select-wrapper .caret {
+  fill: #26a69a !important;
+}
+/* Inactive/Active Default input field color */
+.estimate .input-field input[type]:not([readonly]),
+.estimate .input-field input[type]:focus:not([readonly]),
+.estimate .input-field textarea:not([readonly]),
+.estimate .input-field textarea:focus:not([readonly]),
+.estimate .select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #26a69a !important;
+    color: #607d8b !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.estimate .row {
+  margin-bottom: 0px;
+}
+
+#services .card img {
+  height: 124px;
+}
+#services .card-title {
+  font-weight: 600;
+  text-shadow: 1px 1px 3px #004d40; 
+}
+.steps img {
+  transform: scale(1);
+  transition: all 200ms ease-in;
+}
+.steps img:hover {
+  transition: all 200ms ease-in;
+    transform: scale(1.1);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <!-- Latest compiled and minified BootStarp CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    
+  </head>
+  <body>
+    <div id="page-wrapper" >
+      <div class="container" >
+        <h1>
+          Send Post Data to AJAX
+        </h1>
+        <form name="myForm" class="form-horizontal" id ="myform" action="#" 
+                 method="POST" enctype="multipart/form-datam">
+          <div class="panel panel-info">
+            <div class="panel-heading">Form</div>
+            <div class="panel-body">
+              <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name" class="col-md-4">Name *</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" id="name" name="name"
+                                placeholder="Enter Name" required/>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <label for="Mobile" class="col-md-4">Mobile *</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control"  id="mobile" name="phone"
+                                 placeholder="Enter Mobile Number" required/>
+                      </div>
+                    </div>
+                    <div class="form-group  ">
+                      <label for="email" class="col-md-4">Email </label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" name="email"
+                             placeholder="Enter  Email" >
+                      </div>
+                    </div>
+                     <div class="form-group  ">
+                      <label for="image" class="col-md-4">Select Image </label>
+                      <div class="col-md-6">
+                        <input type="file" class="form-control" name="image" >
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-md-offset-4" style="margin-bottom: 50px;">
+            <center>
+              <input type="submit" class="btn btn-primary" value="Submit" />
+            </center>
+          </div>
+        </form>
+        <div class="row">
+            <?php 
+                $name = $_POST['name'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $image = $_FILES['image'];
+            ?>
+        </div>
+      </div>
+    </div>
+    <script>
+        function submitForm() {
+                    
+          var form_data = new FormData(document.getElementById("myform"));
+          form_data.append("label", "WEBUPLOAD");
+          $.ajax({
+              url: "YOUR URL HERE",
+              type: "POST",
+              data: form_data,
+              processData: false,  // tell jQuery not to process the data
+              contentType: false   // tell jQuery not to set contentType
+          }).done(function( data ) {
+            console.log(data);
+            //Perform ANy action after successfuly post data
+               
+          });
+          return false;     
+        }
+        </script>
+  </body>
+</html>
