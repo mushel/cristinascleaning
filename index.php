@@ -77,7 +77,7 @@ elseif($_POST["contact"]) {
                         <div class="slider"> 
                                 <div class="row">
                                     <br><br>
-                                    <div class="col s5 offset-s1 grey lighten-5">
+                                    <div class="col s10 l6 offset-s1 grey lighten-5">
                                         <h5>Schedule an estimate!</h5>
                                         <?=$thankYou ?>
                                         <form method="post" action="index.php" class="estimate" id="estimate">
@@ -109,6 +109,7 @@ elseif($_POST["contact"]) {
                                                     <option>70163</option>
                                                     <option>70115</option>
                                                     <option>70116</option>
+                                                    <option>70117</option>
                                                     <option>70118</option>
                                                     <option>70119</option>
                                                     <option>70130</option>
@@ -176,7 +177,6 @@ elseif($_POST["contact"]) {
                   <div class="icon-block">
                     <div class="center"><img src="img/magic.png"></div>
                     <h5 class="teal-text">Plan your appointment</h5>
-        
                   </div>
                 </div>
         
@@ -186,7 +186,6 @@ elseif($_POST["contact"]) {
                     <h5 class="teal-text">Easily pay for your services</h5>
                   </div>
                 </div>
-        
                 <div class="col s12 m4">
                   <div class="icon-block">
                     <div class="center"><img src="img/complete.png"></div>
@@ -208,17 +207,16 @@ elseif($_POST["contact"]) {
                       <div class="col s12 m3">
                         <div class="card">
                             <div class="card-image">
-                                <img src="https://static1.squarespace.com/static/58c1c226c534a59cc493b5fc/t/5bfd7a121ae6cf259c7e595e/1543338519342/Clean-House-Clean-Mind-%E2%80%93-the-Mind-Boosting-Benefits-of-Organised-Home-.jpg?format=500w">
+                                <img src="https://picsum.photos/200">
                                 <span class="card-title teal-text text-lighten-3">All Rooms</span>
-                                
-                                
+                            
                             </div>
                         </div>
                       </div>
                       <div class="col s12 m3">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="http://blog.toiletpaperworld.com/wp-content/uploads/2011/03/cleanbathroom-300x200.jpg">
+                                    <img src="https://picsum.photos/200">
                                     <span class="card-title teal-text text-lighten-3">Bathrooms</span>
                                 </div>
                             </div>
@@ -234,7 +232,7 @@ elseif($_POST["contact"]) {
                       <div class="col s12 m3">
                           <div class="card">
                               <div class="card-image">
-                                  <img src="https://i.imgur.com/9yrmX03.jpg" alt="">
+                                  <img src="https://picsum.photos/" alt="">
                                   <span class="card-title teal-text text-lighten-3">Extras</span>
                               </div>
                           </div>
@@ -321,6 +319,7 @@ elseif($_POST["contact"]) {
                                       <option>70163</option>
                                       <option>70115</option>
                                       <option>70116</option>
+                                      <option>70117</option>
                                       <option>70118</option>
                                       <option>70119</option>
                                       <option>70130</option>
