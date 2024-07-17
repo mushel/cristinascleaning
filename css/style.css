@@ -68,7 +68,6 @@ footer .select-wrapper .caret {
   fill: #e0f2f1 !important;
 }
 
-
 /* Inactive/Active Default input label color */
 .estimate .input-field input[type]:focus:not([readonly])+label,
 .estimate .input-field textarea:focus:not([readonly])+label,
@@ -128,9 +127,27 @@ h1, h2, h3, h4 {
   font-family: "Lobster", sans-serif;
   font-weight: 400;
   font-style: normal;
-  
 }
 
 .btn {
   text-transform: none;
+}
+
+@media screen and (min-width: 730px) and (max-width: 974px) {
+  .card .btn.fr {
+    float: none;
+    margin: 0rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 1296px) {
+  .card .btn.fr {
+    float: none;
+    margin: 0rem 0 1rem 0;
+  }
+}
+@media screen and (max-width: 570px) {
+  .card .btn.fr {
+    float: none;
+    margin: 0rem 0 1rem 0;
+  }
 }
