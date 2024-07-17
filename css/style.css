@@ -5,8 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
-html {
+html, body {
   font-family: 'Montserrat', sans-serif;
+  color: #263238;
 }
 .icon-block {
   padding: 0 15px;
@@ -43,6 +44,7 @@ nav ul.right {
   background: url('https://content.thriveglobal.com/wp-content/uploads/2018/06/clean-house-parker.jpg') no-repeat;
   background-size: cover;
   height: 100%;
+  min-height: 200px;
 }
 
 /* Inactive/Active Default input field color */
@@ -65,6 +67,7 @@ footer .input-field > label {
 footer .select-wrapper .caret {
   fill: #e0f2f1 !important;
 }
+
 
 /* Inactive/Active Default input label color */
 .estimate .input-field input[type]:focus:not([readonly])+label,
@@ -94,7 +97,6 @@ footer .select-wrapper .caret {
 }
 #services .card-title {
   font-weight: 600;
-  text-shadow: 1px 1px 3px #004d40; 
 }
 .steps img {
   transform: scale(1);
@@ -103,4 +105,32 @@ footer .select-wrapper .caret {
 .steps img:hover {
   transition: all 200ms ease-in;
     transform: scale(1.1);
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.my-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card h2 {
+  margin-top: 0rem;
+}
+.card .btn.fr {
+  float: right;
+  clear: both;
+  display: flex;
+  margin: -4rem 0 14rem 0;
+}
+/* fonts */
+h1, h2, h3, h4 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.btn {
+  text-transform: none;
 }

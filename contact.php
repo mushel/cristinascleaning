@@ -8,15 +8,11 @@ if($_POST["message"]) {
     $message=$_POST["message"];
     $address=$_POST["address"];
     $zip=$_POST["zip"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message\n$address\n$zip";
-    
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message\n$address\n$zip";   
     mail(
         $recipient, $subject, $mailBody, "From: $sender <$senderEmail>" 
     );
-
     $thankYou="<p>Thank You!!! the message was sent.</p>";
-
 }
 ?>
 <!DOCTYPE html>
@@ -25,7 +21,6 @@ if($_POST["message"]) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>Contact email</title>
-
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
