@@ -410,43 +410,32 @@ if ($_POST["estimate"]) {
                     Made with <a class="teal-text text-lighten-3" href="http://materializecss.com">Materialize</a> &amp; by <a class="teal-text text-lighten-3" href="http://mcurrier.com">m. currier designs</a>
                 </div>
             </div>
-        </footer>
+        </footer>  
+            
+    <!-- Import jQuery (required for Materialize JavaScript) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Import Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Initialize Materialize components
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+        });
+    </script>
 
 
-        <!--  Scripts-->
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="js/materialize.js"></script>
+ <!--  Scripts-->
+        <!-- <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/materialize.js"></script> -->
         <!-- <script src="js/init.js"></script> -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-            
- <!-- Import jQuery (required for Materialize JavaScript) -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- Import Materialize JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script>
-    // Initialize Materialize components
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems);
-    });
-  </script>
         <script>
-            // $(document).ready(function() {
-            //     $('select').formSelect();
-
-            //     $('.datepicker').datepicker();
-
-            //     $('.timepicker').timepicker();
-
-            //     //form stuff
-            //     $("#estimateBtn").click(function() {
-            //         $("#estimateForm").submit(); // Submit the form
-            //         $.post("action.php", function(data) {
-            //             alert(data);
-            //         });
-            //     });
-            // });
+            $(document).ready(function(){
+                // Initialize select dropdown
+                $('select').formSelect();
+            });
         </script>
 </body>
 
