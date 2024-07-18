@@ -1,6 +1,6 @@
 <?php
 $thankYouContact = ""; 
-    if ($_POST["contact"]) {
+    if ($_POST["contactForm"]) {
     $recipient = "mushel@gmail.com";
     $subject = "Hello from the website contact form";
     $name = $_POST["contact_full_name"];
@@ -228,7 +228,7 @@ $thankYouContact = "";
             <div class="container">
                 <div class="section" id="contact">
                     <h3 class="row center teal-text text-lighten-3">Contact Us</h3>
-                    <form method="post" action="index.php" id="contact">
+                    <form method="post" action="index.php" id="contactForm">
                         <div class="row">
                             <?= $thankYouContact ?>
                             <div class="col s12 m6">
