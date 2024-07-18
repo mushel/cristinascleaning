@@ -1,27 +1,6 @@
 <?php
-if ($_POST["estimate"]) {
-    $recipient = "mushel@gmail.com";
-    $subject = "Estimate Request!";
-    $sender = $_POST["sender"];
-    $senderEmail = $_POST["senderEmail"];
-    $message = $_POST["message"];
-    $address = $_POST["address"];
-    $zip = $_POST["zip"];
-    $date = $_POST["date"];
-    $time = $_POST["time"];
-    $tel = $_POST["telephone"];
-
-    $mailBody = "Name: $sender\nEmail: $senderEmail\n\n$message\n$address\n$zip\nDate: $date\nTime: $time\nTelephone: $tel";
-
-    mail(
-        $recipient,
-        $subject,
-        $mailBody,
-        "From: $sender <$senderEmail>"
-    );
-
-    $thankYou = "<p>Thank You!!! Your estimate date and time was sent.</p>";
-} elseif ($_POST["contact"]) {
+$thankYouContact = ""; 
+    if ($_POST["contact"]) {
     $recipient = "mushel@gmail.com";
     $subject = "Hello from the website contact form";
     $name = $_POST["contact_full_name"];
@@ -30,15 +9,21 @@ if ($_POST["estimate"]) {
     $cZip = $_POST["contact_zip"];
     $cMessage = $_POST["contact_textarea"];
     $cTel = $_POST["contact_telephone"];
-    $mailBody = "Name: $name\nEmail: $email\n\n$cMessage\n$stAddress\n$cZip\nTelephone: $cTel";
-    mail(
-        $recipient,
-        $subject,
-        $mailBody,
-        "From: $name <$email>"
-    );
-    $thankYouContact = "<p>Thank You!!! Your message was sent.</p>";
+     // Construct the email body
+     $mailBody = "Name: $name\n";
+     $mailBody .= "Email: $email\n\n";
+     $mailBody .= "Message:\n$cMessage\n\n";
+     $mailBody .= "Street Address: $stAddress\n";
+     $mailBody .= "Zip: $cZip\n";
+     $mailBody .= "Telephone: $cTel";
+    // Send the email
+    if (mail($recipient, $subject, $mailBody, "From: $name <$email>")) {
+        $thankYouContact = "<p>Thank You! Your message was sent.</p>";
+    } else {
+        $thankYouContact = "<p>Oops! Something went wrong. Please try again later.</p>";
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -97,87 +82,6 @@ if ($_POST["estimate"]) {
                         </h2>
                         <a class="btn fr" target="_blank"  href="https://booking.setmore.com/scheduleappointment/aaf0bee6-80a6-4232-95a8-7a5b0a94aea8">Book a consultation
                     </a>
-
-                        <!-- <?= $thankYou ?>
-                        <form method="post" action="index.php" class="estimate" id="estimate">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="full_name" type="text" class="validate" name="sender" required="">
-                                    <label for="full_name">Full Name</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="email" type="text" class="validate" name="senderEmail">
-                                    <label for="email">Email</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="address" type="text" class="validate" name="address">
-                                    <label for="address">Street Address</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <select name="zip">
-                                        <option value="" disabled selected>Pick Your Zip</option>
-                                        <option>70139</option>
-                                        <option>70112</option>
-                                        <option>70113</option>
-                                        <option>70163</option>
-                                        <option>70115</option>
-                                        <option>70116</option>
-                                        <option>70117</option>
-                                        <option>70118</option>
-                                        <option>70119</option>
-                                        <option>70130</option>
-                                        <option>70125</option>
-                                        <option>70122</option>
-                                        <option>70124</option>
-                                        <option>70001</option>
-                                        <option>70002</option>
-                                        <option>70003</option>
-                                        <option>70005</option>
-                                        <option>70006</option>
-                                        <option>70121</option>
-                                        <option>70123</option>
-                                        <option>70062</option>
-                                        <option>70065</option>
-                                    </select>
-                                    <label>Zip</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input name="telephone" type="tel" class="validate">
-                                    <label for="telephone">Telephone</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input type="text" class="datepicker" name="date">
-                                    <label>Date</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input type="text" class="timepicker" name="time">
-                                    <label>Time</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s8">
-                                    <label>Message:</label>
-                                    <textarea rows="5" cols="20" name="message"></textarea>
-                                </div>
-
-                                <div class="input-field col s4">
-                                    <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="estimate" form="estimate">Submit
-                                        <i class="material-icons right">send</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>-->
-                    
-
-                    <!-- setmore -->
                    
 </div>
 </div>
@@ -330,7 +234,7 @@ if ($_POST["estimate"]) {
                             <div class="col s12 m6">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input name="contact_full_name" type="text" class="validate">
+                                        <input name="contact_full_name" type="text" class="validate" required>
                                         <label for="contact_full_name">Full Name</label>
                                     </div>
                                 </div>
@@ -371,7 +275,7 @@ if ($_POST["estimate"]) {
                                     </div>
                                     <div class="input-field col s6">
 
-                                        <input name="contact_telephone" type="tel" class="validate">
+                                        <input name="contact_telephone" type="tel" class="validate" required>
                                         <label for="contact_telephone">Telephone</label>
                                     </div>
                                 </div>
