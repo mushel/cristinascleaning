@@ -1,6 +1,6 @@
 <?php
 $thankYouContact = ""; 
-    if ($_POST["contactForm"]) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
     $recipient = "mushel@gmail.com";
     $subject = "Hello from the website contact form";
     $name = $_POST["contact_full_name"];
@@ -295,7 +295,7 @@ $thankYouContact = "";
                                 </div>
                                 <div class="row">
                                     <div class="col s12 file-field input-field">
-                                        <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="contact" form="contact">Submit
+                                        <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="contactForm" form="contact">Submit
                                             <i class="material-icons right">send</i>
                                         </button>
                                     </div>
