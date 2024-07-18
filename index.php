@@ -228,9 +228,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
             <div class="container">
                 <div class="section" id="contact">
                     <h3 class="row center teal-text text-lighten-3">Contact Us</h3>
-                    <form method="post" action="index.php" id="contactForm">
+                    <h2><?= $thankYouContact ?></h2>
+
+                    <form method="post" action="index.php" id="contactForm" >
                         <div class="row">
-                            <?= $thankYouContact ?>
+                            
                             <div class="col s12 m6">
                                 <div class="row">
                                     <div class="input-field col s12">
@@ -295,7 +297,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
                                 </div>
                                 <div class="row">
                                     <div class="col s12 file-field input-field">
-                                        <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="contactForm" form="contact">Submit
+                                        <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="contactForm" form="contactForm">Submit
                                             <i class="material-icons right">send</i>
                                         </button>
                                     </div>
@@ -339,6 +341,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
             $(document).ready(function(){
                 // Initialize select dropdown
                 $('select').formSelect();
+
             });
         </script>
 </body>
