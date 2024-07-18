@@ -1,0 +1,39 @@
+# Enable rewrite engine
+RewriteEngine On
+RewriteBase /
+
+# Redirect www to non-www (optional)
+RewriteCond %{HTTP_HOST} ^www\.cristinas\.mcurrier\.com [NC]
+RewriteRule ^(.*)$ http://cristinas.mcurrier.com/$1 [L,R=301]
+
+# Redirect HTTP to HTTPS (optional, if you have an SSL certificate)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Handle PHP files
+# If your main file is index.php, this is typically not needed
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^ index.php [L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Set PHP directives (optional, adjust according to your needs)
+# Example:
+# php_value upload_max_filesize 20M
+# php_value post_max_size 20M
+# php_value memory_limit 256M
+# php_value max_execution_time 120
+
+# Error handling (optional)
+# Example:
+# ErrorDocument 404 /errors/notfound.html
+# ErrorDocument 500 /errors/servererror.html
+
+# Security headers (optional, adjust as per your security needs)
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header always append X-Frame-Options SAMEORIGIN
+    Header set X-Content-Type-Options nosniff
+</IfModule>
