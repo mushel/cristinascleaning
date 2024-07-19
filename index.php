@@ -1,6 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $thankYouContact = ""; 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
+    echo "Form submitted!";
     $recipient = "mushel@gmail.com";
     $subject = "Hello from the website contact form";
     $name = $_POST["contact_full_name"];
@@ -23,8 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
         $thankYouContact = "<p>Oops! Something went wrong. Please try again later.</p>";
     }
 }
-
 ?>
+<?php
+if(mail('mcurrierdesigns@gmail.com', 'Test Mail', 'This is a test email')) {
+    echo 'Mail sent successfully.';
+} else {
+    echo 'Failed to send mail.';
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
