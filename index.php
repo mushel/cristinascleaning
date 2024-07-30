@@ -248,19 +248,19 @@ if(mail('mcurrierdesigns@gmail.com', 'Test Mail', 'This is a test email')) {
                             <div class="col s12 m6">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input name="contact_full_name" type="text" class="validate" required>
+                                        <input name="contact_full_name" id="contact_full_name" type="text" class="validate" required>
                                         <label for="contact_full_name">Full Name</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input name="contact_address" type="text" class="validate">
+                                        <input name="contact_address" id="contact_address" type="text" class="validate">
                                         <label for="contact_address">Street Address</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s6">
-                                        <select name="contact_zip">
+                                        <select name="contact_zip" id="contact_zip">
                                             <option value="" disabled selected>Pick Your Zip</option>
                                             <option>70139</option>
                                             <option>70112</option>
@@ -289,7 +289,7 @@ if(mail('mcurrierdesigns@gmail.com', 'Test Mail', 'This is a test email')) {
                                     </div>
                                     <div class="input-field col s6">
 
-                                        <input name="contact_telephone" type="tel" class="validate" required>
+                                        <input name="contact_telephone" id="contact_telephone" type="tel" class="validate" required>
                                         <label for="contact_telephone">Telephone</label>
                                     </div>
                                 </div>
@@ -297,13 +297,13 @@ if(mail('mcurrierdesigns@gmail.com', 'Test Mail', 'This is a test email')) {
                             <div class="col s12 m6">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input name="contact_email" type="email" class="validate">
+                                        <input name="contact_email" id="contact_email" type="email" class="validate">
                                         <label for="contact_email">Email</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <textarea name="contact_textarea" class="materialize-textarea"></textarea>
+                                        <textarea name="contact_textarea" id="contact_textarea" class="materialize-textarea"></textarea>
                                         <label for="contact_textarea">Message</label>
                                     </div>
                                 </div>
