@@ -4,37 +4,46 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $thankYouContact = ""; 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contactForm"])) {
-    echo "Form submitted!";
-    $recipient = "mushel@gmail.com";
-    $subject = "Hello from the website contact form";
-    $name = $_POST["contact_full_name"];
-    $email = $_POST["contact_email"];
-    $stAddress = $_POST["contact_address"];
-    $cZip = $_POST["contact_zip"];
-    $cMessage = $_POST["contact_textarea"];
-    $cTel = $_POST["contact_telephone"];
-     // Construct the email body
-     $mailBody = "Name: $name\n";
-     $mailBody .= "Email: $email\n\n";
-     $mailBody .= "Message:\n$cMessage\n\n";
-     $mailBody .= "Street Address: $stAddress\n";
-     $mailBody .= "Zip: $cZip\n";
-     $mailBody .= "Telephone: $cTel";
-    // Send the email
-    if (mail($recipient, $subject, $mailBody, "From: $name <$email>")) {
-        $thankYouContact = "<p>Thank You! Your message was sent.</p>";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Form submitted!<br>";
+
+    // Check if all required fields are present
+    if (isset($_POST["contact_full_name"], $_POST["contact_email"], $_POST["contact_textarea"])) {
+        $recipient = "mcurrierdesigns@gmail.com";
+        $subject = "Hello from the website contact form";
+        $name = $_POST["contact_full_name"];
+        $email = $_POST["contact_email"];
+        $stAddress = isset($_POST["contact_address"]) ? $_POST["contact_address"] : '';
+        $cZip = isset($_POST["contact_zip"]) ? $_POST["contact_zip"] : '';
+        $cMessage = $_POST["contact_textarea"];
+        $cTel = isset($_POST["contact_telephone"]) ? $_POST["contact_telephone"] : '';
+
+        echo "Name: $name<br>";
+        echo "Email: $email<br>";
+        echo "Message: $cMessage<br>";
+
+        // Construct the email body
+        $mailBody = "Name: $name\n";
+        $mailBody .= "Email: $email\n\n";
+        $mailBody .= "Message:\n$cMessage\n\n";
+        $mailBody .= "Street Address: $stAddress\n";
+        $mailBody .= "Zip: $cZip\n";
+        $mailBody .= "Telephone: $cTel";
+
+        // Send the email
+        if (mail($recipient, $subject, $mailBody, "From: $name <$email>")) {
+            echo "<p>Mail function returned true.</p>";
+            $thankYouContact = "<p>Thank You! Your message was sent.</p>";
+        } else {
+            echo "<p>Mail function returned false.</p>";
+            $thankYouContact = "<p>Oops! Something went wrong. Please try again later.</p>";
+        }
     } else {
-        $thankYouContact = "<p>Oops! Something went wrong. Please try again later.</p>";
+        echo "Required fields are missing.";
     }
 }
-?>
-<?php
-if(mail('mcurrierdesigns@gmail.com', 'Test Mail', 'This is a test email')) {
-    echo 'Mail sent successfully.';
-} else {
-    echo 'Failed to send mail.';
-}
+
+echo $thankYouContact;
 ?>
 
 
