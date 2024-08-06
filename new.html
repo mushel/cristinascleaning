@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Cristina's Cleaning Service</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- <form action="https://formsubmit.co/mushel@gmail.com" method="POST">
+    <label for="email">email</label>
+    <input type="email" name="from" id="from" required>
+    <input type="hidden" name="_next" value="https://test.mcurrier.com/thanks.html">
+     <label for="phone">phone</label>
+    <input type="tel" name="phone"> 
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" required>
+ 
+    <label for="messaage">Message</label>
+    <textarea name="message" id="message" required></textarea>
+
+    <button type="submit" value="send">Send</button>
+</form> -->
+
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="section" id="contact">
+            <h3 class="row center teal-text text-lighten-3">Contact Us</h3>
+            
+
+            <form action="https://formsubmit.co/mushel@gmail.com" method="POST">
+                <div class="row">
+                    
+                    <div class="col s12 m6">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input name="contact_full_name" type="text" class="validate" required>
+                                <label for="contact_full_name">Full Name</label>
+                                <input type="hidden" name="_next" value="https://test.mcurrier.com/thanks.html">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input name="contact_address" type="text" class="validate">
+                                <label for="contact_address">Street Address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select name="contact_zip" id="contact_zip">
+                                    <option value="" disabled selected>Pick Your Zip</option>
+                                    <option>70139</option>
+                                    <option>70112</option>
+                                    <option>70113</option>
+                                    <option>70163</option>
+                                    <option>70115</option>
+                                    <option>70116</option>
+                                    <option>70117</option>
+                                    <option>70118</option>
+                                    <option>70119</option>
+                                    <option>70130</option>
+                                    <option>70125</option>
+                                    <option>70122</option>
+                                    <option>70124</option>
+                                    <option>70001</option>
+                                    <option>70002</option>
+                                    <option>70003</option>
+                                    <option>70005</option>
+                                    <option>70006</option>
+                                    <option>70121</option>
+                                    <option>70123</option>
+                                    <option>70062</option>
+                                    <option>70065</option>
+                                </select>
+                                <label>Zip</label>
+                            </div>
+                            <div class="input-field col s6">
+
+                                <input name="contact_telephone" id="contact_telephone" type="tel" class="validate" required>
+                                <label for="contact_telephone">Telephone</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input name="contact_email" type="email" class="validate" required>
+                                <label for="contact_email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="contact_textarea" id="contact_textarea" class="materialize-textarea"></textarea>
+                                <label for="contact_textarea">Message</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 file-field input-field">
+                                <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="contactForm" form="contactForm">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+        </div>
+        </form>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made with <a class="teal-text text-lighten-3" href="http://materializecss.com">Materialize</a> &amp; by <a class="teal-text text-lighten-3" href="http://mcurrier.com">m. currier designs</a>
+        </div>
+    </div>
+</footer>  
+    
+<!-- Import jQuery (required for Materialize JavaScript) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Import Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+// Initialize Materialize components
+document.addEventListener('DOMContentLoaded', function() {
+var elems = document.querySelectorAll('.sidenav');
+var instances = M.Sidenav.init(elems);
+});
+</script>
+
+
+<!--  Scripts-->
+
+<script>
+    $(document).ready(function(){
+        // Initialize select dropdown
+        $('select').formSelect();
+
+    });
+</script>
+</body>
+
+</html>

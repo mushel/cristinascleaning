@@ -51,7 +51,7 @@ $thankYou = "Your message has been sent.";
                     <div class="input-field col m9 s12">
                       <textarea name="msg" class="materialize-textarea"></textarea>
                       <label for="msg">Message</label>
-                      <?=$thankYou?>
+                      <?= $thankYou?>
                     </div>
                     <div class="input-field col m3 s12">
                       <button class="btn waves-effect waves-light orange darken-3" type="submit" name="submit" value="submit" id="send">Submit
@@ -61,5 +61,6 @@ $thankYou = "Your message has been sent.";
                 </div>
           </form>  
 </div>
+
 </body>
 </html>
