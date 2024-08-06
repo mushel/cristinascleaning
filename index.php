@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if all required fields are present
     if (isset($_POST["contact_full_name"], $_POST["contact_email"], $_POST["contact_textarea"])) {
-        $recipient = "mcurrierdesigns@gmail.com";
+        $recipient = "mushel@gmail.com";
         $subject = "Hello from the website contact form";
         $name = $_POST["contact_full_name"];
         $email = $_POST["contact_email"];
@@ -45,6 +45,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo $thankYouContact;
 ?>
+<!-- email test -->
+<?php
+if (mail('mushel@gmail.com', 'Test Email', 'This is a test email.')) {
+    echo 'Email sent successfully.';
+} else {
+    echo 'Failed to send email.';
+}
+?>
 
 
 <!DOCTYPE html>
@@ -53,7 +61,7 @@ echo $thankYouContact;
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>Starter Template - Materialize</title>
+    <title>Cristina's Cleaning Service</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -139,7 +147,6 @@ echo $thankYouContact;
                         </div>
                     </div>
                 </div>
-
             </div>
             <br>
         </div>
