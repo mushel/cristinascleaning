@@ -48,14 +48,14 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input name="contact_full_name" type="text" class="validate" required>
-                                <label for="contact_full_name">Full Name</label>
+                                <label>Full Name</label>
                                 <input type="hidden" name="_next" value="https://cristinas.mcurrier.com/thanks.html">
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <input name="contact_address" type="text" class="validate">
-                                <label for="contact_address">Street Address</label>
+                                <label>Street Address</label>
                             </div>
                         </div>
                         <div class="row">
@@ -90,7 +90,7 @@
                             <div class="input-field col s6">
 
                                 <input name="contact_telephone" id="contact_telephone" type="tel" class="validate" required>
-                                <label for="contact_telephone">Telephone</label>
+                                <label>Telephone</label>
                             </div>
                         </div>
                     </div>
@@ -98,18 +98,20 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input name="contact_email" type="email" class="validate" required>
-                                <label for="contact_email">Email</label>
+                                <label>Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea name="contact_textarea" id="contact_textarea" class="materialize-textarea"></textarea>
-                                <label for="contact_textarea">Message</label>
+                                <!-- <textarea name="contact_textarea" id="contact_textarea" class="materialize-textarea"></textarea> -->
+                                <input name="message" type="text" class="validate">
+                                <label>Message</label>
+
                             </div>
                         </div>
                         <div class="row">
                             <div class="col s12 file-field input-field">
-                                <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="contactForm" form="contactForm">Submit
+                                <button class="btn waves-effect waves-light teal lighten-2" type="submit">Submit
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>
