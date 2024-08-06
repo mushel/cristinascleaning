@@ -1,12 +1,12 @@
 <?php if(isset($_POST["submit"])) {
 
 $to = "mushel@gmail.com";
-$subject = "Message From Juliana's website";
+$subject = "Message From Cristina's Cleaning website";
 $email = $_POST["email"];
 $name = $_POST["name"];
 $msg = $_POST["msg"];
 
-$headers = "From: julianahoffpauir.com";
+$headers = "From: cristinas.mcurrier.com";
 $mailBody = "$name is contacting you and their email is $email\n\n$msg";
 
 mail($to,$subject,$mailBody,$headers);
@@ -33,11 +33,9 @@ $thankYou = "Your message has been sent.";
 </head>
 
 <body>
-
+<div class="container">
 <form action="#" id="form" method="post">
-              <div class="row">
-              
-              </div>
+            
               <div class="row">
                  
                     <div class="input-field col m6 s12">
@@ -62,3 +60,6 @@ $thankYou = "Your message has been sent.";
                                      
                 </div>
           </form>  
+</div>
+</body>
+</html>
