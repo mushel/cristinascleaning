@@ -1,5 +1,5 @@
 <?php if(isset($_POST["submit"])) {
-
+$thankYou = ""; // Initialize $thankYou
 $to = "mushel@gmail.com";
 $subject = "Message From Cristina's Cleaning website";
 $email = $_POST["email"];
@@ -13,7 +13,7 @@ $headers = "From: cristinas.mcurrier.com";
 $mailBody = "$name is contacting you about:\n\n$msg\n\n$name's email is $email and their address is $address $zip and telephone number is $tel";
 
 mail($to,$subject,$mailBody,$headers);
-$thankYou = ""; 
+
 $thankYou = "Your message has been sent.";
 }
 
