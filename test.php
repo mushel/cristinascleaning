@@ -5,11 +5,14 @@ $subject = "Message From Cristina's Cleaning website";
 $email = $_POST["email"];
 $name = $_POST["name"];
 $msg = $_POST["msg"];
+$tel = $_POST["tel"];
+$address = $_POST["address"];
 
 $headers = "From: cristinas.mcurrier.com";
-$mailBody = "$name is contacting you and their email is $email\n\n$msg";
+$mailBody = "$name is contacting you about:\n\n$msg\n\n$name's email is $email with $address and telephone number is $tel";
 
 mail($to,$subject,$mailBody,$headers);
+$thankYou = ""; 
 $thankYou = "Your message has been sent.";
 }
 
@@ -33,34 +36,41 @@ $thankYou = "Your message has been sent.";
 </head>
 
 <body>
-<div class="container">
-<form action="#" id="form" method="post">
-            
-              <div class="row">
-                 
-                    <div class="input-field col m6 s12">
-                        <input name="name" type="text" class="validate">
-                        <label for="name">Full Name</label>
-                    </div>
-                    <div class="input-field col m6 s12">
-                        <input name="email" type="email" class="validate">
-                        <label for="email">Email</label>   
-                    </div>
-              </div>
-                <div class="row">
-                    <div class="input-field col m9 s12">
-                      <textarea name="msg" class="materialize-textarea"></textarea>
-                      <label for="msg">Message</label>
-                      <?= $thankYou?>
-                    </div>
-                    <div class="input-field col m3 s12">
-                      <button class="btn waves-effect waves-light orange darken-3" type="submit" name="submit" value="submit" id="send">Submit
-                      </button>    
-                    </div> 
-                                     
+    <div class="container">
+        <form action="#" id="form" method="post">
+            <div class="row"> 
+                <div class="input-field col m6 s12">
+                    <input name="name" type="text" class="validate">
+                    <label for="name">Full Name</label>
                 </div>
-          </form>  
-</div>
+                <div class="input-field col m6 s12">
+                    <input name="email" type="email" class="validate">
+                    <label for="email">Email</label>   
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input name="address" type="text" class="validate">
+                    <label>Street address</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <input name="tel" type="tel" class="validate">
+                    <label>Telephone number</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m9 s12">
+                    <input name="msg" type="text" class="validate">
+                    <label for="msg">Message</label>
+                    <?=$thankYou?>
+                </div>
+                <div class="input-field col m3 s12">
+                    <button class="btn waves-effect waves-light orange darken-3" type="submit" name="submit" value="submit" id="send">Submit
+                    </button>    
+                </div>                      
+            </div>
+        </form>  
+    </div>
 
 </body>
 </html>
