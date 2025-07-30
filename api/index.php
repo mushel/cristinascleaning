@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$thankYouContact = ""; 
+$thankYouContact = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Form submitted!<br>";
 
@@ -67,11 +67,11 @@ echo $thankYouContact;
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
- 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -90,7 +90,7 @@ echo $thankYouContact;
                 <li><a class="blue-grey-text" href="#about">About</a></li>
                 <li><a class="blue-grey-text" href="#contact">Contact</a></li>
             </ul>
-            
+
             <ul class="right">
                 <li><a class="blue-grey-text" href="tel:504 232-5554">504 232-5554</a></li>
                 <li><a class="blue-grey-text" href="mailto:info@cristinascleaningnola.com">Email Us</a></li>
@@ -101,20 +101,20 @@ echo $thankYouContact;
     <div class="row mb-0">
         <div class="col s12">
             <div class="slider">
-                <div class="row">    
+                <div class="row">
                     <div class="col s10 l6 offset-s1 my-2">
                         <div class="card">
                             <div class="card-content">
-                        <h2 class="deep-orange-text text-accent-1">Schedule an estimate today!
+                                <h2 class="deep-orange-text text-accent-1">Schedule an estimate today!
 
-                       
-                        </h2>
-                        <a class="btn fr" target="_blank"  href="https://booking.setmore.com/scheduleappointment/aaf0bee6-80a6-4232-95a8-7a5b0a94aea8">Book a consultation
-                    </a>
-                   
-</div>
-</div>
-                    </div> 
+
+                                </h2>
+                                <a class="btn fr" target="_blank" href="https://booking.setmore.com/scheduleappointment/aaf0bee6-80a6-4232-95a8-7a5b0a94aea8">Book a consultation
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@ echo $thankYouContact;
                 <div class="row"><br></div>
                 <div class="row"><br></div>
                 <div class="row"><br></div>
-                
+
                 <!--   Icon Section   -->
                 <div class="row steps">
                     <div class="col s12 m4">
@@ -159,11 +159,11 @@ echo $thankYouContact;
                     <div class="col s12 m3">
                         <div class="card">
                             <div class="card-image">
-                                <img src="https://picsum.photos/id/42/200">      
+                                <img src="https://picsum.photos/id/42/200">
 
                             </div>
                             <div class="card-content">
-                            <span class="card-title indigo-text">All Rooms</span>
+                                <span class="card-title indigo-text">All Rooms</span>
                             </div>
                         </div>
                     </div>
@@ -181,22 +181,22 @@ echo $thankYouContact;
                         <div class="card">
                             <div class="card-image">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHv-DLCuLgPQNd9TWoIRu3unoCTzQVTJFZdLbgAPrgzKNd4gPF" alt="">
-</div>
-<div class="card-content">
-     <span class="card-title teal-text">Kitchen</span>
-</div>
-                               
-                            
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title teal-text">Kitchen</span>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="col s12 m3">
                         <div class="card">
                             <div class="card-image">
                                 <img src="https://picsum.photos/id/305/200" alt="">
-                                
+
                             </div>
                             <div class="card-content">
-                            <span class="card-title orange-text text-darken-4">Extras</span>
+                                <span class="card-title orange-text text-darken-4">Extras</span>
                             </div>
                         </div>
 
@@ -258,9 +258,9 @@ echo $thankYouContact;
                     <h3 class="row center teal-text text-lighten-3">Contact Us</h3>
                     <h2><?= $thankYouContact ?></h2>
 
-                    <form method="post" action="index.php" id="contactForm" >
+                    <form method="post" action="index.php" id="contactForm">
                         <div class="row">
-                            
+
                             <div class="col s12 m6">
                                 <div class="row">
                                     <div class="input-field col s12">
@@ -341,32 +341,32 @@ echo $thankYouContact;
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Made with <a class="teal-text text-lighten-3" href="http://materializecss.com">Materialize</a> &amp; by <a class="teal-text text-lighten-3" href="http://mcurrier.com">m. currier designs</a>
+                    Made with <a class="teal-text text-lighten-3" href="http://materializecss.com">Materialize</a> &amp; by <a class="teal-text text-lighten-3" href="http://design.mcurrier.com" target="_blank" title="m. currier designs">m. currier designs</a> booking with <a href="https://setmore.com/" class="teal-text text-lighten-3" target="_blank" title="Setmore">Setmore</a>
                 </div>
             </div>
-        </footer>  
-            
-    <!-- Import jQuery (required for Materialize JavaScript) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Import Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        </footer>
 
-    <script>
-        // Initialize Materialize components
-        document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-        });
-    </script>
+        <!-- Import jQuery (required for Materialize JavaScript) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Import Materialize JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            // Initialize Materialize components
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems);
+            });
+        </script>
 
 
- <!--  Scripts-->
+        <!--  Scripts-->
         <!-- <script type="text/javascript" src="js/materialize.min.js"></script>
         <script src="js/materialize.js"></script> -->
         <!-- <script src="js/init.js"></script> -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
         <script>
-            $(document).ready(function(){
+            $(document).ready(function() {
                 // Initialize select dropdown
                 $('select').formSelect();
 
